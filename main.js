@@ -8,6 +8,7 @@ Hamburger.addEventListener("click", () => {
 
 // Making SVG link clickable
 const svgClickable = document.querySelector(".bookmark");
+const svgClickable1 = document.querySelector(".bookmark1");
 
 //text in the SVG to be changed
 const svgText = document.getElementById("textChange");
@@ -16,6 +17,10 @@ const svgText1 = document.getElementById("textChanged");
 // svg icon to be changed
 const circle = document.getElementById("circle-fill");
 const path = document.getElementById("path-fill");
+
+// svg icon to be changed for mobile view
+const circle1 = document.getElementById("circle-fill1");
+const path1 = document.getElementById("path-fill1");
 
 //adjusting the opacity of the bookmark container
 const adjustBookContain = document.getElementById("bookmark-container");
@@ -38,3 +43,16 @@ svgClickable.addEventListener("click", () => {
     svgText.style.display = "block";
   }
 });
+
+svgClickable1.addEventListener("click", () => {
+  if (circle1.style.fill === "rgb(122, 122, 122)") {
+    circle1.style.fill = "hsl(176, 72%, 28%)";
+    path1.style.fill = "hsl(0,0%,100%)";
+    path1.style.opacity = "1";
+  } else {
+    circle1.style.fill = "rgb(122, 122, 122)";
+  }
+});
+
+console.log(circle1.style.fill === "rgb(122, 122, 122)");
+console.log(circle1.style.fill === "rgb(20, 123, 136)");

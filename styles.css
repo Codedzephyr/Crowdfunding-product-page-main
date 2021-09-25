@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap");
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -90,28 +90,39 @@ nav {
 
 main {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   background-color: whitesmoke;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: calc(100vh - 12.8px);
+}
+
+section.overall-container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 80%;
+}
+
+.container {
+  width: 100%;
+  height: 3vh;
 }
 
 .main-section {
-  width: 55%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   position: relative;
+  min-height: calc(25vh - 12.8px);
 }
 
 .first-section {
-  min-height: calc(35vh - 12.8px);
-  width: 100%;
+  min-height: calc(25vh - 12.8px);
+  width: 80%;
   position: absolute;
-  background-color: #fff;
-  width: 100%;
   top: -80px;
+  background-color: #fff;
   border-radius: 10px;
 }
 
@@ -136,21 +147,23 @@ main {
   margin: 0px 10px;
   font-family: "Commissioner", sans-serif;
   font-weight: 700;
+  font-size: 1.75rem;
 }
 
 .first-section .description {
   text-align: center;
   font-family: "Commissioner", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   margin: 15px 10px;
   font-size: 16px;
+  color: #a9a9a9;
 }
 
 .first-section .button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
+  width: 85%;
   margin: 30px auto;
   min-height: 8vh;
 }
@@ -159,6 +172,26 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.first-section .button-container .button1 .svg-container {
+  display: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.first-section .button-container .button1 .svg-container circle#circle-fill1 {
+  fill: #7a7a7a;
+  opacity: 1;
+}
+
+.first-section .button-container .button1 .svg-container path#path-fill1 {
+  fill: #e8e8e8;
+  opacity: 0.4;
 }
 
 .first-section .button-container .button1 .button {
@@ -168,6 +201,7 @@ main {
   padding: 16px 20px;
   text-align: center;
   text-decoration: none;
+  white-space: nowrap;
   display: inline-block;
   margin: 4px 2px;
   font-family: "Commissioner", sans-serif;
@@ -278,12 +312,28 @@ main {
   color: cornflowerblue;
 }
 
+.second-section {
+  min-height: calc(45vh - 12.8px);
+  width: 80%;
+  border-radius: 10px;
+  background-color: blue;
+}
+
+.fourth-section {
+  min-height: calc(25vh - 12.8px);
+  width: 90%;
+  background-color: red;
+}
+
 @media screen and (max-width: 768px) {
   .container-for-links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .main-section {
+    height: calc(32vh - 12.8px);
   }
   .nav-links-container {
     width: 100%;
@@ -335,8 +385,24 @@ main {
             flex-direction: column;
     gap: 20px;
   }
-  .first-section {
-    min-height: calc(35vh - 12.8px);
+  .first-section .button-container .button1 .svg-container {
+    display: block;
+  }
+  body
+> main
+> section
+> section
+> div.button-container
+> div.button1
+> div
+> svg {
+    float: right;
+  }
+  .first-section .button-container .bookmark-container {
+    display: none;
+  }
+  svg {
+    float: right;
   }
 }
 
@@ -344,8 +410,11 @@ main {
   header {
     height: calc(65vh - 12.8px);
   }
-  .main-section {
-    width: 90%;
+  .first-section {
+    width: 100%;
+  }
+  .second-section {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

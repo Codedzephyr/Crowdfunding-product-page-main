@@ -4,13 +4,13 @@ $black: hsl(0, 0%, 0%);
 $darkGray: hsl(0, 0%, 48%);
 $moderateCyan: hsl(176, 50%, 47%);
 $darkCyan: hsl(176, 72%, 28%);
-$lightGray : #e8e8e8;
+$lightGray: #e8e8e8;
 
 // fontSize
 $fontSize: 16px;
 
 //font link
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap");
 
 //font type
 $commissioner: "Commissioner", sans-serif;
@@ -95,24 +95,36 @@ nav {
 
 main {
   width: 100%;
-  display: flex;
+  display: grid;
+  place-items: center;
   background-color: whitesmoke;
-  justify-content: center;
-  min-height: calc(100vh - 12.8px);
+}
+
+section.overall-container {
+  display: grid;
+  place-items: center;
+  width: 80%;
+}
+
+.container{
+  width: 100%;
+  height: 3vh;
 }
 
 .main-section {
-  width: 55%;
+  width: 100%;
+  display: grid;
+  place-items: center;
   position: relative;
+  min-height: calc(25vh - 12.8px);
 }
 
 .first-section {
-  min-height: calc(35vh - 12.8px);
-  width: 100%;
+  min-height: calc(25vh - 12.8px);
+  width: 80%;
   position: absolute;
-  background-color: #fff;
-  width: 100%;
   top: -80px;
+  background-color: #fff;
   border-radius: 10px;
 
   .image-container {
@@ -132,24 +144,43 @@ main {
     margin: 0px 10px;
     font-family: $commissioner;
     font-weight: $fontWeight7;
+    font-size: 1.75rem;
   }
 
   .description {
     text-align: center;
     font-family: $commissioner;
-    font-weight: $fontWeight7;
+    font-weight: $fontWeight4;
     margin: 15px 10px;
     font-size: $fontSize;
+    color: #a9a9a9;
   }
 
   .button-container {
     display: flex;
-    width: 80%;
+    width: 85%;
     margin: 30px auto;
     min-height: 8vh;
 
     .button1 {
       flex: 1;
+      display: flex;
+
+      .svg-container {
+        display: none;
+        flex: 1;
+
+        circle#circle-fill1 {
+          fill: $darkGray;
+          opacity: 1;
+        }
+
+        // rgb(20, 123, 116);
+        path#path-fill1 {
+          fill: $lightGray;
+          opacity: 0.4;
+        }
+      }
 
       .button {
         background-color: $darkCyan;
@@ -158,6 +189,7 @@ main {
         padding: 16px 20px;
         text-align: center;
         text-decoration: none;
+        white-space: nowrap;
         display: inline-block;
         margin: 4px 2px;
         font-family: $commissioner;
@@ -186,12 +218,12 @@ main {
           z-index: 70;
         }
 
-         circle#circle-fill {
+        circle#circle-fill {
           fill: $darkGray;
           opacity: 1;
         }
 
-        path#path-fill{
+        path#path-fill {
           fill: $lightGray;
           opacity: 0.4;
         }
@@ -253,11 +285,27 @@ main {
   }
 }
 
+.second-section {
+  min-height: calc(45vh - 12.8px);
+  width: 80%;
+  border-radius: 10px;
+  background-color: blue;
+}
+
+.fourth-section {
+  min-height: calc(25vh - 12.8px);
+  width: 90%;
+  background-color: red;
+}
+
 @media screen and (max-width: 768px) {
   .container-for-links {
     flex-direction: column;
   }
 
+  .main-section {
+    height: calc(32vh - 12.8px);
+  }
   .nav-links-container {
     width: 100%;
     position: relative;
@@ -305,8 +353,27 @@ main {
     flex-direction: column;
     gap: 20px;
   }
-  .first-section {
-    min-height: calc(35vh - 12.8px);
+
+  .first-section .button-container .button1 .svg-container {
+    display: block;
+  }
+
+  body
+    > main
+    > section
+    > section
+    > div.button-container
+    > div.button1
+    > div
+    > svg {
+    float: right;
+  }
+
+  .first-section .button-container .bookmark-container {
+    display: none;
+  }
+  svg{
+    float: right;
   }
 }
 
@@ -314,7 +381,10 @@ main {
   header {
     height: calc(65vh - 12.8px);
   }
-  .main-section {
-    width: 90%;
+  .first-section{
+    width: 100%;
+  }
+  .second-section{
+    width: 100%;
   }
 }
