@@ -106,7 +106,7 @@ section.overall-container {
   width: 80%;
 }
 
-.container{
+.container {
   width: 100%;
   height: 3vh;
 }
@@ -163,7 +163,7 @@ section.overall-container {
     min-height: 8vh;
 
     .button1 {
-      flex: 1;
+      flex: 2;
       display: flex;
 
       .svg-container {
@@ -175,7 +175,6 @@ section.overall-container {
           opacity: 1;
         }
 
-        // rgb(20, 123, 116);
         path#path-fill1 {
           fill: $lightGray;
           opacity: 0.4;
@@ -286,10 +285,95 @@ section.overall-container {
 }
 
 .second-section {
-  min-height: calc(45vh - 12.8px);
+  min-height: calc(25vh - 12.8px);
   width: 80%;
+  display: grid;
+  place-items: center;
   border-radius: 10px;
-  background-color: blue;
+  background-color: #fff;
+}
+
+.contents {
+  width: 90%;
+  display: flex;
+  min-height: calc(15vh - 12.8px);
+}
+
+.description1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-right: 3px solid $darkGray;
+
+  .title {
+    margin: 0px 10px;
+    font-family: $commissioner;
+    font-weight: $fontWeight7;
+    font-size: 2rem;
+  }
+  .descriptionss {
+    margin: 0px 10px;
+    font-family: $commissioner;
+    font-weight: $fontWeight7;
+    color: $darkGray;
+    font-size: 1.2rem;
+  }
+}
+
+.description2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 3px solid $darkGray;
+
+  .title {
+    margin: 0px 10px;
+    font-family: $commissioner;
+    font-weight: $fontWeight7;
+    font-size: 2rem;
+  }
+  .descriptionss {
+    margin: 0px 10px;
+    font-family: $commissioner;
+    font-weight: $fontWeight7;
+    color: $darkGray;
+    font-size: 1.2rem;
+  }
+}
+
+.description3 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    margin: 0px 10px;
+    font-family: $commissioner;
+    font-weight: $fontWeight7;
+    font-size: 2rem;
+  }
+  .descriptionss {
+    margin: 0px 10px;
+    font-family: $commissioner;
+    font-weight: $fontWeight7;
+    color: $darkGray;
+    font-size: 1.2rem;
+  }
+}
+
+.progress-bar-container {
+  width: 90%;
+  background-color: $darkGray;
+  height: 2vh;
+  border-radius: 10px;
+}
+.progress-bar {
+  width: 80%;
+  height: 2vh;
+  border-radius: 10px;
+  background-color: $darkCyan;
 }
 
 .fourth-section {
@@ -354,6 +438,54 @@ section.overall-container {
     gap: 20px;
   }
 
+  .contents {
+    flex-direction: column;
+  }
+
+  .description1 {
+    border-right: none;
+    display: grid;
+    place-items: center;
+  }
+  .description2 {
+    border-right: none;
+    display: grid;
+    place-items: center;
+  }
+  .description3 {
+    border-right: none;
+    display: grid;
+    place-items: center;
+  }
+
+  .contents{
+    gap: 20px;
+  }
+
+  .contents{
+    margin: 20px 0px;
+  }
+
+  .description1 .descriptionss{
+    margin: 5px 0px;
+  }
+
+  .description2 .descriptionss{
+    margin: 5px 0px;
+  }
+
+  .description3 .descriptionss{
+    margin: 5px 0px;
+  }
+
+  .content-container{
+    text-align: center;
+  }
+
+  .progress-bar-container{
+    margin: 20px 0px;
+  }
+
   .first-section .button-container .button1 .svg-container {
     display: block;
   }
@@ -372,7 +504,7 @@ section.overall-container {
   .first-section .button-container .bookmark-container {
     display: none;
   }
-  svg{
+  svg {
     float: right;
   }
 }
@@ -381,10 +513,10 @@ section.overall-container {
   header {
     height: calc(65vh - 12.8px);
   }
-  .first-section{
+  .first-section {
     width: 100%;
   }
-  .second-section{
+  .second-section {
     width: 100%;
   }
 }
