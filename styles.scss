@@ -108,7 +108,12 @@ section.overall-container {
 
 .container {
   width: 100%;
-  height: 3vh;
+  height: 4vh;
+}
+
+.contain {
+  width: 100%;
+  height: 4vh;
 }
 
 .main-section {
@@ -116,14 +121,15 @@ section.overall-container {
   display: grid;
   place-items: center;
   position: relative;
-  min-height: calc(25vh - 12.8px);
+  height: calc(19vh - 12.8px);
 }
 
 .first-section {
   min-height: calc(25vh - 12.8px);
   width: 80%;
   position: absolute;
-  top: -80px;
+  top: -80%;
+  // bottom: -200px;
   background-color: #fff;
   border-radius: 10px;
 
@@ -160,7 +166,7 @@ section.overall-container {
     display: flex;
     width: 85%;
     margin: 30px auto;
-    min-height: 8vh;
+    min-height: 4vh;
 
     .button1 {
       flex: 2;
@@ -231,7 +237,7 @@ section.overall-container {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 7vh;
+          height: 56px;
           right: 0px;
           flex: 2;
           width: 180px;
@@ -378,18 +384,47 @@ section.overall-container {
 
 .fourth-section {
   min-height: calc(25vh - 12.8px);
-  width: 90%;
-  background-color: red;
+  width: 80%;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
+.centered-container {
+  width: 90%;
+  min-height: calc(15vh - 12.8px);
+
+  .title {
+    margin: 20px 10px;
+    font-family: $commissioner;
+    font-weight: $fontWeight9;
+    font-size: 1.7rem;
+  }
+
+  .description-project {
+    margin: 10px 10px;
+    font-family: $commissioner;
+    font-weight: $fontWeight7;
+    color: $darkGray;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+section.fifth-section {
+  width: 700px;
+  height: 500px;
+  background-color: #008b68;
+}
 @media screen and (max-width: 768px) {
   .container-for-links {
     flex-direction: column;
   }
 
-  .main-section {
-    height: calc(32vh - 12.8px);
-  }
+  // .main-section {
+  //   min-height: calc(22vh - 12.8px);
+  // }
   .nav-links-container {
     width: 100%;
     position: relative;
@@ -458,31 +493,31 @@ section.overall-container {
     place-items: center;
   }
 
-  .contents{
+  .contents {
     gap: 20px;
   }
 
-  .contents{
+  .contents {
     margin: 20px 0px;
   }
 
-  .description1 .descriptionss{
+  .description1 .descriptionss {
     margin: 5px 0px;
   }
 
-  .description2 .descriptionss{
+  .description2 .descriptionss {
     margin: 5px 0px;
   }
 
-  .description3 .descriptionss{
+  .description3 .descriptionss {
     margin: 5px 0px;
   }
 
-  .content-container{
+  .content-container {
     text-align: center;
   }
 
-  .progress-bar-container{
+  .progress-bar-container {
     margin: 20px 0px;
   }
 
@@ -519,4 +554,20 @@ section.overall-container {
   .second-section {
     width: 100%;
   }
+  .fourth-section {
+    width: 100%;
+  }
+
+  .first-section{
+    min-height: calc(30vh - 12.8px);
+  }
+  // .first-section{
+  //   top: -90%;
+  // }
+  .main-section {
+    min-height: calc(29vh - 12.8px);
+  }
+  // .contain{
+  //   height: 10vh;
+  // }
 }
