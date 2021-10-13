@@ -10,7 +10,7 @@ $lightGray: #e8e8e8;
 $fontSize: 16px;
 
 //font link
-@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Commissioner:100,200,300,regular,500,600,700,800,900);
 
 //font type
 $commissioner: "Commissioner", sans-serif;
@@ -42,7 +42,7 @@ body {
 //Container for the navbar
 
 header {
-  height: calc(55vh - 12.8px);
+  height: calc(52vh - 12.8px);
   background: url(./images/image-hero-desktop.jpg) no-repeat center;
   background-size: cover;
   flex: 1;
@@ -89,7 +89,7 @@ nav {
   text-decoration: none;
   color: whitesmoke;
   font-size: $fontSize;
-  font-weight: $fontWeight7;
+  font-weight: $fontWeight5;
   font-family: $commissioner;
 }
 
@@ -103,33 +103,19 @@ main {
 section.overall-container {
   display: grid;
   place-items: center;
-  width: 80%;
-}
-
-.container {
   width: 100%;
-  height: 4vh;
-}
-
-.contain {
-  width: 100%;
-  height: 4vh;
+  position: relative;
+  top: -100px;
 }
 
 .main-section {
   width: 100%;
   display: grid;
   place-items: center;
-  position: relative;
-  height: calc(19vh - 12.8px);
 }
 
 .first-section {
-  min-height: calc(25vh - 12.8px);
-  width: 80%;
-  position: absolute;
-  top: -80%;
-  // bottom: -200px;
+  width: 70%;
   background-color: #fff;
   border-radius: 10px;
 
@@ -150,7 +136,7 @@ section.overall-container {
     margin: 0px 10px;
     font-family: $commissioner;
     font-weight: $fontWeight7;
-    font-size: 1.75rem;
+    font-size: Clamp(1.5rem, 5vw, 1.75rem);
   }
 
   .description {
@@ -158,7 +144,7 @@ section.overall-container {
     font-family: $commissioner;
     font-weight: $fontWeight4;
     margin: 15px 10px;
-    font-size: $fontSize;
+    font-size: Clamp(1.1rem, 5vw, 0.8rem);
     color: #a9a9a9;
   }
 
@@ -191,15 +177,15 @@ section.overall-container {
         background-color: $darkCyan;
         border: none;
         color: #fff;
-        padding: 16px 20px;
+        padding: 1em 1.25em;
         text-align: center;
         text-decoration: none;
         white-space: nowrap;
         display: inline-block;
-        margin: 4px 2px;
+        margin: 0.25rem 0.125rem;
         font-family: $commissioner;
-        font-size: $fontSize;
-        font-weight: $fontWeight7;
+        font-size: Clamp(0.8rem, 5vw, 1rem);
+        font-weight: $fontWeight4;
         cursor: pointer;
         border-radius: 30px;
       }
@@ -250,7 +236,7 @@ section.overall-container {
           .description1 {
             text-align: center;
             font-family: $commissioner;
-            font-weight: $fontWeight7;
+            font-weight: $fontWeight4;
             padding-left: 1.7rem;
             opacity: none;
             font-size: $fontSize;
@@ -260,7 +246,7 @@ section.overall-container {
           .description {
             text-align: center;
             font-family: $commissioner;
-            font-weight: $fontWeight9;
+            font-weight: $fontWeight4;
             padding-left: 2.5rem;
             display: none;
             color: #008b68;
@@ -270,7 +256,7 @@ section.overall-container {
           span.description-hover {
             text-align: center;
             font-family: $commissioner;
-            font-weight: $fontWeight7;
+            font-weight: $fontWeight4;
             margin: 15px 10px;
             display: none;
             font-size: $fontSize;
@@ -291,8 +277,9 @@ section.overall-container {
 }
 
 .second-section {
-  min-height: calc(25vh - 12.8px);
-  width: 80%;
+  min-height: 176px;
+  margin-top: 50px;
+  width: 70%;
   display: grid;
   place-items: center;
   border-radius: 10px;
@@ -312,17 +299,17 @@ section.overall-container {
   border-right: 3px solid $darkGray;
 
   .title {
-    margin: 0px 10px;
+    margin: 5px 10px;
     font-family: $commissioner;
-    font-weight: $fontWeight7;
-    font-size: 2rem;
+    font-weight: $fontWeight5;
+    font-size: 1.8rem;
   }
   .descriptionss {
     margin: 0px 10px;
     font-family: $commissioner;
-    font-weight: $fontWeight7;
+    font-weight: $fontWeight4;
     color: $darkGray;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -334,17 +321,17 @@ section.overall-container {
   border-right: 3px solid $darkGray;
 
   .title {
-    margin: 0px 10px;
+    margin: 5px 10px;
     font-family: $commissioner;
-    font-weight: $fontWeight7;
-    font-size: 2rem;
+    font-weight: $fontWeight5;
+    font-size: 1.8rem;
   }
   .descriptionss {
     margin: 0px 10px;
     font-family: $commissioner;
-    font-weight: $fontWeight7;
+    font-weight: $fontWeight4;
     color: $darkGray;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -355,17 +342,17 @@ section.overall-container {
   justify-content: center;
 
   .title {
-    margin: 0px 10px;
+    margin: 5px 10px;
     font-family: $commissioner;
-    font-weight: $fontWeight7;
-    font-size: 2rem;
+    font-weight: $fontWeight5;
+    font-size: 1.8rem;
   }
   .descriptionss {
     margin: 0px 10px;
     font-family: $commissioner;
-    font-weight: $fontWeight7;
+    font-weight: $fontWeight4;
     color: $darkGray;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -382,9 +369,9 @@ section.overall-container {
   background-color: $darkCyan;
 }
 
-.fourth-section {
-  min-height: calc(25vh - 12.8px);
-  width: 80%;
+.third-section {
+  width: 70%;
+  margin-top: 50px;
   display: grid;
   place-items: center;
   border-radius: 10px;
@@ -393,41 +380,528 @@ section.overall-container {
 
 .centered-container {
   width: 90%;
-  min-height: calc(15vh - 12.8px);
 
   .title {
     margin: 20px 10px;
     font-family: $commissioner;
-    font-weight: $fontWeight9;
+    font-weight: $fontWeight7;
     font-size: 1.7rem;
   }
 
   .description-project {
-    margin: 10px 10px;
+    margin: 10px 10px 30px 10px;
     font-family: $commissioner;
-    font-weight: $fontWeight7;
+    font-weight: $fontWeight4;
     color: $darkGray;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
   }
 }
 
-section.fifth-section {
-  width: 700px;
-  height: 500px;
-  background-color: #008b68;
+div.third-section-first-container {
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid $lightGray;
+  margin-bottom: 1.3rem;
+
+  div.inner-container1 {
+    width: 90%;
+    margin: 1.5rem auto;
+    p.bamboo {
+      display: inline-block;
+      color: $black;
+      font-size: $fontSize;
+      font-weight: $fontWeight7;
+      font-family: $commissioner;
+    }
+
+    p.pledge {
+      color: $moderateCyan;
+      font-size: $fontSize;
+      font-weight: $fontWeight5;
+      font-family: $commissioner;
+      display: inline-block;
+      float: right;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      margin: 1.7rem 0rem;
+      color: $darkGray;
+      line-height: 1.6;
+      font-family: $commissioner;
+    }
+
+    p.number {
+      font-size: 1.8rem;
+      font-weight: $fontWeight7;
+      font-family: $commissioner;
+      color: black;
+      display: inline-block;
+    }
+    sup {
+      vertical-align: middle;
+      font-size: initial;
+      font-size: $commissioner;
+      color: $darkGray;
+    }
+
+    .button {
+      background-color: $darkCyan;
+      border: none;
+      color: #fff;
+      padding: 0.6em 1.2em;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      // margin: 0.25rem 0.125rem;
+      font-family: $commissioner;
+      font-size: Clamp(0.8rem, 5vw, 1rem);
+      font-weight: $fontWeight4;
+      cursor: pointer;
+      border-radius: 30px;
+      float: right;
+    }
+  }
 }
-@media screen and (max-width: 768px) {
-  .container-for-links {
-    flex-direction: column;
+
+div.third-section-second-container {
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid $lightGray;
+  margin-bottom: 1.3rem;
+
+  div.inner-container2 {
+    width: 90%;
+    margin: 1.5rem auto;
+    p.bamboo {
+      display: inline-block;
+      color: $black;
+      font-size: $fontSize;
+      font-weight: $fontWeight7;
+      font-family: $commissioner;
+    }
+
+    p.pledge {
+      color: $moderateCyan;
+      font-size: $fontSize;
+      font-weight: $fontWeight5;
+      font-family: $commissioner;
+      display: inline-block;
+      float: right;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      margin: 1.7rem 0rem;
+      color: $darkGray;
+      line-height: 1.6;
+      font-family: $commissioner;
+    }
+
+    p.number {
+      font-size: 1.8rem;
+      font-weight: $fontWeight7;
+      font-family: $commissioner;
+      color: black;
+      display: inline-block;
+    }
+    sup {
+      vertical-align: middle;
+      font-size: initial;
+      font-size: $commissioner;
+      color: $darkGray;
+    }
+
+    .button {
+      background-color: $moderateCyan;
+      border: none;
+      color: #fff;
+      padding: 0.6em 1.2em;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      font-family: $commissioner;
+      font-size: Clamp(0.8rem, 5vw, 1rem);
+      font-weight: $fontWeight4;
+      cursor: pointer;
+      border-radius: 30px;
+      float: right;
+    }
+  }
+}
+
+div.third-section-third-container {
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid $lightGray;
+  margin-bottom: 1.3rem;
+
+  div.inner-container3 {
+    width: 90%;
+    opacity: 0.6;
+    margin: 1.5rem auto;
+    p.bamboo {
+      display: inline-block;
+      color: $black;
+      font-size: $fontSize;
+      font-weight: $fontWeight7;
+      font-family: $commissioner;
+    }
+
+    p.pledge {
+      color: $moderateCyan;
+      font-size: $fontSize;
+      font-weight: $fontWeight5;
+      font-family: $commissioner;
+      display: inline-block;
+      float: right;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      margin: 1.7rem 0rem;
+      color: $darkGray;
+      line-height: 1.6;
+      font-family: $commissioner;
+    }
+
+    p.number {
+      font-size: 1.8rem;
+      font-weight: $fontWeight7;
+      font-family: $commissioner;
+      color: black;
+      display: inline-block;
+    }
+    sup {
+      vertical-align: middle;
+      font-size: initial;
+      font-size: $commissioner;
+      color: $darkGray;
+    }
+
+    .button {
+      background-color: $moderateCyan;
+      border: none;
+      color: #fff;
+      padding: 0.6em 1.2em;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      font-family: $commissioner;
+      font-size: Clamp(0.8rem, 5vw, 1rem);
+      font-weight: $fontWeight4;
+      cursor: pointer;
+      border-radius: 30px;
+      float: right;
+    }
+  }
+}
+
+div.modal {
+  position: fixed;
+  z-index: 100;
+  padding-top: 4.25rem;
+  left: 0;
+  display: none;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+div.modal-content {
+  // background-color: $lightGray;
+  background-color: #fff;
+  margin: auto;
+  min-height: 600px;
+  border-radius: 8px;
+  padding: 1.25rem;
+  width: 70%;
+
+  div.modal-content-inner-container {
+    width: 98%;
+    margin: 0.2rem auto;
+    p.title {
+      display: inline-block;
+      color: $black;
+      font-size: $fontSize;
+      font-weight: $fontWeight7;
+      font-family: $commissioner;
+    }
+    span.close {
+      float: right;
+      cursor: pointer;
+    }
+    p.description {
+      color: $darkGray;
+      font-size: $fontSize;
+      margin: 0.3rem 0;
+      line-height: 1.2;
+      font-family: $commissioner;
+    }
   }
 
-  // .main-section {
-  //   min-height: calc(22vh - 12.8px);
-  // }
+  div.modal-content-inner-container2 {
+    border: 2px solid $lightGray;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0.7rem 0;
+
+    .form-contents {
+      width: 95%;
+      margin: 0.9rem auto;
+
+      input[type="radio"] {
+        margin-right: 1rem;
+        // margin: 0.5rem 1.3rem 0.55rem 2rem;
+      }
+      label.container {
+        color: $black;
+        cursor: pointer;
+        font-size: $fontSize;
+        font-family: $commissioner;
+      }
+
+      label.container:hover {
+        color: $moderateCyan;
+      }
+      p.descriptions {
+        color: $darkGray;
+        font-size: $fontSize;
+        line-height: 1.3;
+        margin: 0.4rem 0rem 0.4rem 2.3rem;
+        font-family: $commissioner;
+      }
+    }
+  }
+
+  div.modal-content-inner-container3 {
+    border: 2px solid $lightGray;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0.7rem 0;
+
+    .form-contents {
+      width: 95%;
+      margin: 0.9rem auto;
+
+      input[type="radio"] {
+        margin-right: 1rem;
+        // margin: 0.5rem 1.3rem 0.55rem 2rem;
+      }
+      label.container {
+        color: $black;
+        font-size: $fontSize;
+        cursor: pointer;
+        font-weight: $fontWeight7;
+        font-family: $commissioner;
+      }
+      label.container:hover {
+        color: $moderateCyan;
+      }
+      p.title-description {
+        color: $moderateCyan;
+        font-size: $fontSize;
+        display: inline-block;
+        margin: 0 0.3rem;
+        font-weight: $fontWeight7;
+        font-weight: $fontWeight4;
+        font-family: $commissioner;
+      }
+
+      p.remainder-description {
+        color: $black;
+        font-weight: $fontWeight7;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        display: inline-block;
+        float: right;
+      }
+
+      p.remainder-description1 {
+        color: $black;
+        font-weight: $fontWeight7;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        margin: 0.3rem 2.2rem;
+        display: none;
+      }
+      p.descriptions {
+        color: $darkGray;
+        font-size: $fontSize;
+        line-height: 1.3;
+        margin: 0.5rem 0rem 0.5rem 2.3rem;
+        font-family: $commissioner;
+      }
+    }
+  }
+
+  div.modal-content-inner-container4 {
+    border: 2px solid $lightGray;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0.7rem 0;
+
+    .form-contents {
+      width: 95%;
+      margin: 0.9rem auto;
+
+      input[type="radio"] {
+        margin-right: 1rem;
+        // margin: 0.5rem 1.3rem 0.55rem 2rem;
+      }
+      label.container {
+        color: $black;
+        cursor: pointer;
+        font-size: $fontSize;
+        font-weight: $fontWeight7;
+        font-family: $commissioner;
+      }
+      label.container:hover {
+        color: $moderateCyan;
+      }
+      p.title-description {
+        color: $moderateCyan;
+        font-size: $fontSize;
+        display: inline-block;
+        margin: 0 0.3rem;
+        font-weight: $fontWeight7;
+        font-weight: $fontWeight4;
+        font-family: $commissioner;
+      }
+
+      p.remainder-description {
+        color: $black;
+        font-weight: $fontWeight7;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        display: inline-block;
+        float: right;
+      }
+      p.remainder-description1 {
+        color: $black;
+        font-weight: $fontWeight7;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        display: none;
+        margin: 0.3rem 2.2rem;
+      }
+      p.descriptions {
+        color: $darkGray;
+        font-size: $fontSize;
+        line-height: 1.3;
+        margin: 0.5rem 0rem 0.5rem 2.3rem;
+        font-family: $commissioner;
+      }
+    }
+  }
+  div.modal-content-inner-container5 {
+    border: 2px solid $lightGray;
+    border-radius: 8px;
+    width: 100%;
+    opacity: 0.6;
+    margin: 0.7rem 0;
+  }
+  .form-contents {
+    width: 95%;
+    margin: 0.9rem auto;
+
+    input[type="radio"] {
+      margin-right: 1rem;
+      // margin: 0.5rem 1.3rem 0.55rem 2rem;
+    }
+    label.container {
+      color: $black;
+      font-size: $fontSize;
+      font-weight: $fontWeight7;
+      font-family: $commissioner;
+    }
+    p.title-description {
+      color: $moderateCyan;
+      font-size: $fontSize;
+      display: inline-block;
+      margin: 0 0.3rem;
+      font-weight: $fontWeight7;
+      font-weight: $fontWeight4;
+      font-family: $commissioner;
+    }
+
+    p.remainder-description {
+      color: $black;
+      font-weight: $fontWeight7;
+      font-size: $fontSize;
+      font-family: $commissioner;
+      display: inline-block;
+      float: right;
+    }
+    p.remainder-description1 {
+      color: $black;
+      font-weight: $fontWeight7;
+      font-size: $fontSize;
+      font-family: $commissioner;
+      margin: 0.3rem 2.2rem;
+      display: none;
+    }
+    p.descriptions {
+      color: $darkGray;
+      font-size: $fontSize;
+      line-height: 1.3;
+      margin: 0.5rem 0rem 0.5rem 2.3rem;
+      font-family: $commissioner;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // for nav links
+  .container-for-links {
+    flex-direction: column;
+    z-index: 10;
+  }
+  // third section containing the mahogany edition
+  div.third-section-first-container div.inner-container1 p.pledge {
+    float: left;
+    display: block;
+    margin: 0.4rem 0rem 0rem 0rem;
+  }
+
+  div.third-section-first-container div.inner-container1 p.bamboo {
+    display: block;
+  }
+
+  div.third-section-second-container div.inner-container2 p.pledge {
+    float: left;
+    display: block;
+    margin: 0.4rem 0rem 0rem 0rem;
+  }
+
+  div.third-section-second-container div.inner-container2 p.bamboo {
+    display: block;
+  }
+
+  div.third-section-third-container div.inner-container3 p.pledge {
+    float: left;
+    display: block;
+    margin: 0.4rem 0rem 0rem 0rem;
+  }
+
+  div.third-section-third-container div.inner-container3 p.bamboo {
+    display: block;
+  }
+
   .nav-links-container {
     width: 100%;
     position: relative;
+  }
+
+  section.overall-container {
+    z-index: 2;
   }
 
   #navigation.nav-links-container {
@@ -470,7 +944,7 @@ section.fifth-section {
 
   .button-container {
     flex-direction: column;
-    gap: 20px;
+    // gap: 20px;
   }
 
   .contents {
@@ -542,32 +1016,79 @@ section.fifth-section {
   svg {
     float: right;
   }
+  div.modal-content
+    div.modal-content-inner-container3
+    .form-contents
+    p.remainder-description {
+    display: none;
+  }
+  div.modal-content
+    div.modal-content-inner-container4
+    .form-contents
+    p.remainder-description {
+    display: none;
+  }
+  div.modal-content
+    div.modal-content-inner-container5
+    .form-contents
+    p.remainder-description {
+    display: none;
+  }
+  div.modal-content
+    div.modal-content-inner-container3
+    .form-contents
+    p.remainder-description1 {
+    display: block;
+  }
+  div.modal-content
+    div.modal-content-inner-container4
+    .form-contents
+    p.remainder-description1 {
+    display: block;
+  }
+  div.modal-content
+    div.modal-content-inner-container5
+    .form-contents
+    p.remainder-description1 {
+    display: block;
+  }
+  div.modal-content
+    div.modal-content-inner-container3
+    .form-contents
+    p.title-description {
+    display: block;
+    margin-top: 0.1rem;
+    margin-left: 2.4rem;
+  }
+  div.modal-content
+    div.modal-content-inner-container4
+    .form-contents
+    p.title-description {
+    display: block;
+    margin-top: 0.1rem;
+    margin-left: 2.4rem;
+  }
+  div.modal-content
+    div.modal-content-inner-container5
+    .form-contents
+    p.title-description {
+    display: block;
+    margin-top: 0.1rem;
+    margin-left: 2.4rem;
+  }
 }
 
 @media screen and (max-width: 425px) {
-  header {
-    height: calc(65vh - 12.8px);
-  }
   .first-section {
-    width: 100%;
+    width: 90%;
   }
   .second-section {
-    width: 100%;
+    width: 90%;
   }
-  .fourth-section {
-    width: 100%;
+  .third-section {
+    width: 90%;
   }
-
-  .first-section{
-    min-height: calc(30vh - 12.8px);
-  }
-  // .first-section{
-  //   top: -90%;
-  // }
-  .main-section {
-    min-height: calc(29vh - 12.8px);
-  }
-  // .contain{
-  //   height: 10vh;
-  // }
+div.modal-content{
+  width: 85%;
+}
 }

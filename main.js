@@ -2,6 +2,15 @@
 const NavigationLinks = document.getElementById("navigation");
 const Hamburger = document.getElementById("nav-bar");
 
+// modal butoton
+const modalButton = document.querySelector(".button");
+
+// close modal button
+const closemodalButton = document.getElementById("close");
+
+// modal
+const modal = document.getElementById("myModal");
+
 Hamburger.addEventListener("click", () => {
   NavigationLinks.classList.toggle("nav-links-container");
 });
@@ -54,5 +63,16 @@ svgClickable1.addEventListener("click", () => {
   }
 });
 
-console.log(circle1.style.fill === "rgb(122, 122, 122)");
-console.log(circle1.style.fill === "rgb(20, 123, 136)");
+modalButton.addEventListener("click", () => {
+  modal.style.display = "block";
+});
+
+closemodalButton.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Commissioner:100,200,300,regular,500,600,700,800,900);
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -12,7 +12,7 @@
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -20,12 +20,12 @@ body {
 }
 
 header {
-  height: calc(55vh - 12.8px);
+  height: calc(52vh - 12.8px);
   background: url(./images/image-hero-desktop.jpg) no-repeat center;
   background-size: cover;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
 }
 
@@ -41,11 +41,11 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container-for-links {
@@ -58,14 +58,14 @@ nav {
 
 .navbar-brand {
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 .nav-links-container {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .nav-links {
@@ -73,7 +73,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 .nav-links-item {
@@ -84,8 +84,8 @@ nav {
   text-decoration: none;
   color: whitesmoke;
   font-size: 16px;
-  font-weight: 700;
-  font-family: 'Commissioner', sans-serif;
+  font-weight: 500;
+  font-family: "Commissioner", sans-serif;
 }
 
 main {
@@ -100,34 +100,20 @@ section.overall-container {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: 80%;
+  width: 100%;
   position: relative;
   top: -100px;
 }
-
-/* .container {
-  width: 100%;
-  height: 4vh;
-}
-
-.contain {
-  width: 100%;
-  height: 4vh;
-} */
 
 .main-section {
   width: 100%;
   display: -ms-grid;
   display: grid;
   place-items: center;
-  /* height: calc(19vh - 12.8px); */
 }
 
 .first-section {
-  /* min-height: 250px; */
-  width: 80%;
-  /* position: absolute; */
-  /* top: -80%; */
+  width: 70%;
   background-color: #fff;
   border-radius: 10px;
 }
@@ -137,8 +123,8 @@ section.overall-container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   height: 7vh;
 }
@@ -151,17 +137,17 @@ section.overall-container {
 .first-section .title {
   text-align: center;
   margin: 0px 10px;
-  font-family: 'Commissioner', sans-serif;
+  font-family: "Commissioner", sans-serif;
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: Clamp(1.5rem, 5vw, 1.75rem);
 }
 
 .first-section .description {
   text-align: center;
-  font-family: 'Commissioner', sans-serif;
+  font-family: "Commissioner", sans-serif;
   font-weight: 400;
   margin: 15px 10px;
-  font-size: 16px;
+  font-size: Clamp(1.1rem, 5vw, 0.8rem);
   color: #a9a9a9;
 }
 
@@ -176,8 +162,8 @@ section.overall-container {
 
 .first-section .button-container .button1 {
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,8 +172,8 @@ section.overall-container {
 .first-section .button-container .button1 .svg-container {
   display: none;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .first-section .button-container .button1 .svg-container circle#circle-fill1 {
@@ -204,29 +190,29 @@ section.overall-container {
   background-color: #147b74;
   border: none;
   color: #fff;
-  padding: 16px 20px;
+  padding: 1em 1.25em;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   display: inline-block;
-  margin: 4px 2px;
-  font-family: 'Commissioner', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  margin: 0.25rem 0.125rem;
+  font-family: "Commissioner", sans-serif;
+  font-size: Clamp(0.8rem, 5vw, 1rem);
+  font-weight: 400;
   cursor: pointer;
   border-radius: 30px;
 }
 
 .first-section .button-container .bookmark-container {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .first-section .button-container .bookmark-container .relative-bookmark {
@@ -236,58 +222,42 @@ section.overall-container {
   position: relative;
 }
 
-.first-section
-  .button-container
-  .bookmark-container
-  .relative-bookmark
-  .svg-container {
+.first-section .button-container .bookmark-container .relative-bookmark .svg-container {
   position: absolute;
   width: 100%;
   left: 0px;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   cursor: pointer;
   z-index: 70;
 }
 
-.first-section
-  .button-container
-  .bookmark-container
-  .relative-bookmark
-  circle#circle-fill {
+.first-section .button-container .bookmark-container .relative-bookmark circle#circle-fill {
   fill: #7a7a7a;
   opacity: 1;
 }
 
-.first-section
-  .button-container
-  .bookmark-container
-  .relative-bookmark
-  path#path-fill {
+.first-section .button-container .bookmark-container .relative-bookmark path#path-fill {
   fill: #e8e8e8;
   opacity: 0.4;
 }
 
-.first-section
-  .button-container
-  .bookmark-container
-  .relative-bookmark
-  .bookmark-contain {
+.first-section .button-container .bookmark-container .relative-bookmark .bookmark-contain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 56px;
   right: 0px;
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   width: 180px;
   background-color: #7a7a7a;
   opacity: 0.3;
@@ -296,45 +266,30 @@ section.overall-container {
   padding: 20px 20px;
 }
 
-.first-section
-  .button-container
-  .bookmark-container
-  .relative-bookmark
-  .bookmark-contain
-  .description1 {
+.first-section .button-container .bookmark-container .relative-bookmark .bookmark-contain .description1 {
   text-align: center;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
   padding-left: 1.7rem;
   opacity: none;
   font-size: 16px;
   display: block;
 }
 
-.first-section
-  .button-container
-  .bookmark-container
-  .relative-bookmark
-  .bookmark-contain
-  .description {
+.first-section .button-container .bookmark-container .relative-bookmark .bookmark-contain .description {
   text-align: center;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 900;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
   padding-left: 2.5rem;
   display: none;
   color: #008b68;
   font-size: 16px;
 }
 
-.first-section
-  .button-container
-  .bookmark-container
-  .relative-bookmark
-  .bookmark-contain
-  span.description-hover {
+.first-section .button-container .bookmark-container .relative-bookmark .bookmark-contain span.description-hover {
   text-align: center;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
   margin: 15px 10px;
   display: none;
   font-size: 16px;
@@ -350,9 +305,9 @@ section.overall-container {
 }
 
 .second-section {
-  min-height: 250px;
+  min-height: 176px;
   margin-top: 50px;
-  width: 80%;
+  width: 70%;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -370,91 +325,91 @@ section.overall-container {
 
 .description1 {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-right: 3px solid #7a7a7a;
 }
 
 .description1 .title {
-  margin: 0px 10px;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
+  margin: 5px 10px;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 
 .description1 .descriptionss {
   margin: 0px 10px;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
   color: #7a7a7a;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .description2 {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-right: 3px solid #7a7a7a;
 }
 
 .description2 .title {
-  margin: 0px 10px;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
+  margin: 5px 10px;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 
 .description2 .descriptionss {
   margin: 0px 10px;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
   color: #7a7a7a;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .description3 {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .description3 .title {
-  margin: 0px 10px;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
+  margin: 5px 10px;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 
 .description3 .descriptionss {
   margin: 0px 10px;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
   color: #7a7a7a;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .progress-bar-container {
@@ -471,10 +426,9 @@ section.overall-container {
   background-color: #147b74;
 }
 
-.fourth-section {
-  /* min-height: calc(25vh - 12.8px); */
+.third-section {
+  width: 70%;
   margin-top: 50px;
-  width: 80%;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -484,41 +438,542 @@ section.overall-container {
 
 .centered-container {
   width: 90%;
-  min-height: calc(15vh - 12.8px);
 }
 
 .centered-container .title {
   margin: 20px 10px;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 900;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 700;
   font-size: 1.7rem;
 }
 
 .centered-container .description-project {
-  margin: 10px 10px;
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
+  margin: 10px 10px 30px 10px;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
   color: #7a7a7a;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
 }
 
-section.fifth-section {
-  width: 700px;
-  height: 500px;
-  background-color: #008b68;
+div.third-section-first-container {
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 1.3rem;
+}
+
+div.third-section-first-container div.inner-container1 {
+  width: 90%;
+  margin: 1.5rem auto;
+}
+
+div.third-section-first-container div.inner-container1 p.bamboo {
+  display: inline-block;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.third-section-first-container div.inner-container1 p.pledge {
+  color: #3cb4ac;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Commissioner", sans-serif;
+  display: inline-block;
+  float: right;
+}
+
+div.third-section-first-container div.inner-container1 p.description {
+  font-size: 1.1rem;
+  margin: 1.7rem 0rem;
+  color: #7a7a7a;
+  line-height: 1.6;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.third-section-first-container div.inner-container1 p.number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  color: black;
+  display: inline-block;
+}
+
+div.third-section-first-container div.inner-container1 sup {
+  vertical-align: middle;
+  font-size: initial;
+  font-size: "Commissioner", sans-serif;
+  color: #7a7a7a;
+}
+
+div.third-section-first-container div.inner-container1 .button {
+  background-color: #147b74;
+  border: none;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: "Commissioner", sans-serif;
+  font-size: Clamp(0.8rem, 5vw, 1rem);
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 30px;
+  float: right;
+}
+
+div.third-section-second-container {
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 1.3rem;
+}
+
+div.third-section-second-container div.inner-container2 {
+  width: 90%;
+  margin: 1.5rem auto;
+}
+
+div.third-section-second-container div.inner-container2 p.bamboo {
+  display: inline-block;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.third-section-second-container div.inner-container2 p.pledge {
+  color: #3cb4ac;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Commissioner", sans-serif;
+  display: inline-block;
+  float: right;
+}
+
+div.third-section-second-container div.inner-container2 p.description {
+  font-size: 1.1rem;
+  margin: 1.7rem 0rem;
+  color: #7a7a7a;
+  line-height: 1.6;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.third-section-second-container div.inner-container2 p.number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  color: black;
+  display: inline-block;
+}
+
+div.third-section-second-container div.inner-container2 sup {
+  vertical-align: middle;
+  font-size: initial;
+  font-size: "Commissioner", sans-serif;
+  color: #7a7a7a;
+}
+
+div.third-section-second-container div.inner-container2 .button {
+  background-color: #3cb4ac;
+  border: none;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: "Commissioner", sans-serif;
+  font-size: Clamp(0.8rem, 5vw, 1rem);
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 30px;
+  float: right;
+}
+
+div.third-section-third-container {
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 1.3rem;
+}
+
+div.third-section-third-container div.inner-container3 {
+  width: 90%;
+  opacity: 0.6;
+  margin: 1.5rem auto;
+}
+
+div.third-section-third-container div.inner-container3 p.bamboo {
+  display: inline-block;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.third-section-third-container div.inner-container3 p.pledge {
+  color: #3cb4ac;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Commissioner", sans-serif;
+  display: inline-block;
+  float: right;
+}
+
+div.third-section-third-container div.inner-container3 p.description {
+  font-size: 1.1rem;
+  margin: 1.7rem 0rem;
+  color: #7a7a7a;
+  line-height: 1.6;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.third-section-third-container div.inner-container3 p.number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  color: black;
+  display: inline-block;
+}
+
+div.third-section-third-container div.inner-container3 sup {
+  vertical-align: middle;
+  font-size: initial;
+  font-size: "Commissioner", sans-serif;
+  color: #7a7a7a;
+}
+
+div.third-section-third-container div.inner-container3 .button {
+  background-color: #3cb4ac;
+  border: none;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: "Commissioner", sans-serif;
+  font-size: Clamp(0.8rem, 5vw, 1rem);
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 30px;
+  float: right;
+}
+
+div.modal {
+  position: fixed;
+  z-index: 100;
+  padding-top: 4.25rem;
+  left: 0;
+  display: none;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+div.modal-content {
+  background-color: #fff;
+  margin: auto;
+  min-height: 600px;
+  border-radius: 8px;
+  padding: 1.25rem;
+  width: 70%;
+}
+
+div.modal-content div.modal-content-inner-container {
+  width: 98%;
+  margin: 0.2rem auto;
+}
+
+div.modal-content div.modal-content-inner-container p.title {
+  display: inline-block;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container span.close {
+  float: right;
+  cursor: pointer;
+}
+
+div.modal-content div.modal-content-inner-container p.description {
+  color: #7a7a7a;
+  font-size: 16px;
+  margin: 0.3rem 0;
+  line-height: 1.2;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container2 {
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0.7rem 0;
+}
+
+div.modal-content div.modal-content-inner-container2 .form-contents {
+  width: 95%;
+  margin: 0.9rem auto;
+}
+
+div.modal-content div.modal-content-inner-container2 .form-contents input[type="radio"] {
+  margin-right: 1rem;
+}
+
+div.modal-content div.modal-content-inner-container2 .form-contents label.container {
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container2 .form-contents label.container:hover {
+  color: #3cb4ac;
+}
+
+div.modal-content div.modal-content-inner-container2 .form-contents p.descriptions {
+  color: #7a7a7a;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0.4rem 0rem 0.4rem 2.3rem;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container3 {
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0.7rem 0;
+}
+
+div.modal-content div.modal-content-inner-container3 .form-contents {
+  width: 95%;
+  margin: 0.9rem auto;
+}
+
+div.modal-content div.modal-content-inner-container3 .form-contents input[type="radio"] {
+  margin-right: 1rem;
+}
+
+div.modal-content div.modal-content-inner-container3 .form-contents label.container {
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container3 .form-contents label.container:hover {
+  color: #3cb4ac;
+}
+
+div.modal-content div.modal-content-inner-container3 .form-contents p.title-description {
+  color: #3cb4ac;
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 0.3rem;
+  font-weight: 700;
+  font-weight: 400;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container3 .form-contents p.remainder-description {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+  display: inline-block;
+  float: right;
+}
+
+div.modal-content div.modal-content-inner-container3 .form-contents p.remainder-description1 {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+  margin: 0.3rem 2.2rem;
+  display: none;
+}
+
+div.modal-content div.modal-content-inner-container3 .form-contents p.descriptions {
+  color: #7a7a7a;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0.5rem 0rem 0.5rem 2.3rem;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container4 {
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0.7rem 0;
+}
+
+div.modal-content div.modal-content-inner-container4 .form-contents {
+  width: 95%;
+  margin: 0.9rem auto;
+}
+
+div.modal-content div.modal-content-inner-container4 .form-contents input[type="radio"] {
+  margin-right: 1rem;
+}
+
+div.modal-content div.modal-content-inner-container4 .form-contents label.container {
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container4 .form-contents label.container:hover {
+  color: #3cb4ac;
+}
+
+div.modal-content div.modal-content-inner-container4 .form-contents p.title-description {
+  color: #3cb4ac;
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 0.3rem;
+  font-weight: 700;
+  font-weight: 400;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container4 .form-contents p.remainder-description {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+  display: inline-block;
+  float: right;
+}
+
+div.modal-content div.modal-content-inner-container4 .form-contents p.remainder-description1 {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+  display: none;
+  margin: 0.3rem 2.2rem;
+}
+
+div.modal-content div.modal-content-inner-container4 .form-contents p.descriptions {
+  color: #7a7a7a;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0.5rem 0rem 0.5rem 2.3rem;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content div.modal-content-inner-container5 {
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  width: 100%;
+  opacity: 0.6;
+  margin: 0.7rem 0;
+}
+
+div.modal-content .form-contents {
+  width: 95%;
+  margin: 0.9rem auto;
+}
+
+div.modal-content .form-contents input[type="radio"] {
+  margin-right: 1rem;
+}
+
+div.modal-content .form-contents label.container {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content .form-contents p.title-description {
+  color: #3cb4ac;
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 0.3rem;
+  font-weight: 700;
+  font-weight: 400;
+  font-family: "Commissioner", sans-serif;
+}
+
+div.modal-content .form-contents p.remainder-description {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+  display: inline-block;
+  float: right;
+}
+
+div.modal-content .form-contents p.remainder-description1 {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+  margin: 0.3rem 2.2rem;
+  display: none;
+}
+
+div.modal-content .form-contents p.descriptions {
+  color: #7a7a7a;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0.5rem 0rem 0.5rem 2.3rem;
+  font-family: "Commissioner", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
   .container-for-links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 10;
+  }
+  div.third-section-first-container div.inner-container1 p.pledge {
+    float: left;
+    display: block;
+    margin: 0.4rem 0rem 0rem 0rem;
+  }
+  div.third-section-first-container div.inner-container1 p.bamboo {
+    display: block;
+  }
+  div.third-section-second-container div.inner-container2 p.pledge {
+    float: left;
+    display: block;
+    margin: 0.4rem 0rem 0rem 0rem;
+  }
+  div.third-section-second-container div.inner-container2 p.bamboo {
+    display: block;
+  }
+  div.third-section-third-container div.inner-container3 p.pledge {
+    float: left;
+    display: block;
+    margin: 0.4rem 0rem 0rem 0rem;
+  }
+  div.third-section-third-container div.inner-container3 p.bamboo {
+    display: block;
   }
   .nav-links-container {
     width: 100%;
     position: relative;
+  }
+  section.overall-container {
+    z-index: 2;
   }
   #navigation.nav-links-container {
     display: none;
@@ -526,8 +981,8 @@ section.fifth-section {
   .nav-links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 30px;
     background-color: whitesmoke;
     border-radius: 10px;
@@ -549,11 +1004,11 @@ section.fifth-section {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .hamburger {
     cursor: pointer;
@@ -562,15 +1017,14 @@ section.fifth-section {
   .button-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 20px;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .contents {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .description1 {
     border-right: none;
@@ -615,13 +1069,13 @@ section.fifth-section {
     display: block;
   }
   body
-    > main
-    > section
-    > section
-    > div.button-container
-    > div.button1
-    > div
-    > svg {
+> main
+> section
+> section
+> div.button-container
+> div.button1
+> div
+> svg {
     float: right;
   }
   .first-section .button-container .bookmark-container {
@@ -630,26 +1084,80 @@ section.fifth-section {
   svg {
     float: right;
   }
+  div.modal-content
+div.modal-content-inner-container3
+.form-contents
+p.remainder-description {
+    display: none;
+  }
+  div.modal-content
+div.modal-content-inner-container4
+.form-contents
+p.remainder-description {
+    display: none;
+  }
+  div.modal-content
+div.modal-content-inner-container5
+.form-contents
+p.remainder-description {
+    display: none;
+  }
+  div.modal-content
+div.modal-content-inner-container3
+.form-contents
+p.remainder-description1 {
+    display: block;
+  }
+  div.modal-content
+div.modal-content-inner-container4
+.form-contents
+p.remainder-description1 {
+    display: block;
+  }
+  div.modal-content
+div.modal-content-inner-container5
+.form-contents
+p.remainder-description1 {
+    display: block;
+  }
+  div.modal-content
+div.modal-content-inner-container3
+.form-contents
+p.title-description {
+    display: block;
+    margin-top: 0.1rem;
+    margin-left: 2.4rem;
+  }
+  div.modal-content
+div.modal-content-inner-container4
+.form-contents
+p.title-description {
+    display: block;
+    margin-top: 0.1rem;
+    margin-left: 2.4rem;
+  }
+  div.modal-content
+div.modal-content-inner-container5
+.form-contents
+p.title-description {
+    display: block;
+    margin-top: 0.1rem;
+    margin-left: 2.4rem;
+  }
 }
 
 @media screen and (max-width: 425px) {
-  /* header {
-    height: calc(65vh - 12.8px);
-  } */
   .first-section {
-    width: 100%;
+    width: 90%;
   }
   .second-section {
-    width: 100%;
+    width: 90%;
   }
-  .fourth-section {
-    width: 100%;
+  .third-section {
+    width: 90%;
   }
-  /* .first-section {
-    min-height: calc(30vh - 12.8px);
+  div.modal-content {
+    width: 85%;
   }
-  .main-section {
-    min-height: calc(29vh - 12.8px);
-  } */
 }
 /*# sourceMappingURL=styles.css.map */
