@@ -34,6 +34,38 @@ const path1 = document.getElementById("path-fill1");
 //adjusting the opacity of the bookmark container
 const adjustBookContain = document.getElementById("bookmark-container");
 
+// radio button
+const selectRadioButton = document.getElementById("select-radio");
+const selectRadioButton1 = document.getElementById("select-radio1");
+
+// donate form container
+const donateFormContainer = document.querySelector(".donate-container");
+const donateFormContainer1 = document.querySelector(".donate-container1");
+
+// third section
+const donatedAmount = document.getElementById("donated-amount").innerHTML;
+const totalBackers = document.getElementById("total-backers").innerText;
+
+// const currencyRemoval = parseFloat(donatedAmount.substring(1));
+const currencyRemoval = parseFloat(donatedAmount.replace(/[^0-9\.-]+/g, ""));
+const convertedTotalBackers = parseInt(totalBackers.replace(/,/g, ""));
+
+// form
+
+// donateButton
+const donateButton = document.getElementById("button1");
+const donateButton1 = document.getElementById("button2");
+
+console.log(convertedTotalBackers);
+console.log(currencyRemoval);
+
+// console.log(parseFloat(donatedAmount.replace(/,/g, '')));
+console.log(donatedAmount);
+// console.log(calculation);
+
+// console.log(convertedDonatedAmount);
+// console.log(totalBackers);
+
 // adding a function to the SVG
 svgClickable.addEventListener("click", () => {
   if (svgText1.style.display !== "block") {
@@ -76,3 +108,34 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+selectRadioButton.addEventListener("click", () => {
+  if (donateFormContainer.style.display != "block") {
+    donateFormContainer.style.display = "block";
+  } else {
+    donateFormContainer.style.display = "none";
+  }
+});
+
+selectRadioButton1.addEventListener("click", () => {
+  if (donateFormContainer1.style.display != "block") {
+    donateFormContainer1.style.display = "block";
+  } else {
+    donateFormContainer1.style.display = "none";
+  }
+});
+
+donateButton.addEventListener("click", () => {
+  const amountDonated = parseInt(document.querySelector('#amountInput').value);
+  console.log(amountDonated);
+  const totalDonation = amountDonated + currencyRemoval;
+  console.log(totalDonation);
+  // const amountDonated1 = document.getElementById("amount1").value;
+});
+
+// donateButton1.addEventListener("click", () => {
+//   console.log(amountDonated1);
+//   amountDonated1.value = "";
+// });
+
+
