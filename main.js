@@ -10,6 +10,7 @@ const closemodalButton = document.getElementById("close");
 
 // modal
 const modal = document.getElementById("myModal");
+const modal1 = document.getElementById("myModal2");
 
 Hamburger.addEventListener("click", () => {
   NavigationLinks.classList.toggle("nav-links-container");
@@ -50,7 +51,15 @@ const totalBackers = document.getElementById("total-backers").innerText;
 const currencyRemoval = parseFloat(donatedAmount.replace(/[^0-9\.-]+/g, ""));
 const convertedTotalBackers = parseInt(totalBackers.replace(/,/g, ""));
 
-// form
+// border color
+const grayBorderColor = document.querySelector(
+  ".modal-content-inner-container3"
+);
+const grayBorderColor1 = document.querySelector(
+  ".modal-content-inner-container4"
+);
+
+const closeModal = document.querySelector(".button-got");
 
 // donateButton
 const donateButton = document.getElementById("button1");
@@ -108,34 +117,54 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+window.onclick = function (event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+};
 
 selectRadioButton.addEventListener("click", () => {
   if (donateFormContainer.style.display != "block") {
     donateFormContainer.style.display = "block";
+    grayBorderColor.style.borderColor = "hsl(176, 50%, 47%)";
   } else {
     donateFormContainer.style.display = "none";
+    grayBorderColor.style.borderColor = "#e8e8e8";
   }
 });
 
 selectRadioButton1.addEventListener("click", () => {
   if (donateFormContainer1.style.display != "block") {
     donateFormContainer1.style.display = "block";
+    grayBorderColor1.style.borderColor = "hsl(176, 50%, 47%)";
   } else {
     donateFormContainer1.style.display = "none";
+    grayBorderColor1.style.borderColor = "#e8e8e8";
   }
 });
 
 donateButton.addEventListener("click", () => {
-  const amountDonated = parseInt(document.querySelector('#amountInput').value);
+  const amountDonated = parseInt(document.querySelector("#amountInput").value);
   console.log(amountDonated);
   const totalDonation = amountDonated + currencyRemoval;
   console.log(totalDonation);
-  // const amountDonated1 = document.getElementById("amount1").value;
+//  const total = totalDonation.toLocaleString();
+//  console.log(total);
+
+const total = `$${totalDonation.toLocaleString()}`;
+console.log(total);
+  modal1.style.display = "block";
+  modal.style.display = "none";
+
 });
 
-// donateButton1.addEventListener("click", () => {
-//   console.log(amountDonated1);
-//   amountDonated1.value = "";
-// });
+donateButton1.addEventListener("click", () => {
+  // console.log(amountDonated1);
+  // amountDonated1.value = "";
+  modal1.style.display = "block";
+  modal.style.display = "none";
+});
 
-
+closeModal.addEventListener("click", () => {
+  modal1.style.display = "none";
+});
