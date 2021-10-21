@@ -882,13 +882,13 @@ div.modal-content div.modal-content-inner-container3 div.button-container div.fo
   font-weight: 500;
   font-family: "Commissioner", sans-serif;
   font-size: 16px;
-  top: 10px;
+  top: 12px;
   color: #7a7a7a;
 }
 
 div.modal-content div.modal-content-inner-container3 div.button-container div.form-input-container #amountInput {
   width: 80px;
-  padding: 12px;
+  padding: 12px 30px;
   font-family: "Commissioner", sans-serif;
   font-size: 16px;
   border: 1px solid #7a7a7a;
@@ -1054,13 +1054,13 @@ div.modal-content div.modal-content-inner-container4 div.button-container div.fo
   font-weight: 500;
   font-family: "Commissioner", sans-serif;
   font-size: 16px;
-  top: 10px;
+  top: 12px;
   color: #7a7a7a;
 }
 
 div.modal-content div.modal-content-inner-container4 div.button-container div.form-input-container #amount1 {
   width: 80px;
-  padding: 12px;
+  padding: 12px 30px;
   font-family: "Commissioner", sans-serif;
   font-size: 16px;
   border: 1px solid #7a7a7a;

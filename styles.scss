@@ -790,12 +790,12 @@ div.modal-content {
           font-weight: $fontWeight5;
           font-family: $commissioner;
           font-size: $fontSize;
-          top: 10px;
+          top: 12px;
           color: $darkGray;
         }
         #amountInput {
           width: 80px;
-          padding: 12px;
+          padding: 12px 30px;
           font-family: $commissioner;
           font-size: $fontSize;
           border: 1px solid $darkGray;
@@ -931,13 +931,13 @@ div.modal-content {
           font-weight: $fontWeight5;
           font-family: $commissioner;
           font-size: $fontSize;
-          top: 10px;
+          top: 12px;
           color: $darkGray;
         }
 
         #amount1 {
           width: 80px;
-          padding: 12px;
+          padding: 12px 30px;
           font-family: $commissioner;
           font-size: $fontSize;
           border: 1px solid $darkGray;
