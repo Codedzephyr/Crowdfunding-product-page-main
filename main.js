@@ -45,11 +45,11 @@ const donateFormContainer1 = document.querySelector(".donate-container1");
 
 // third section
 const donatedAmount = document.getElementById("donated-amount").innerHTML;
-const totalBackers = document.getElementById("total-backers").innerText;
+const totalBackers = document.getElementById("total-backers").innerHTML;
 
 // const currencyRemoval = parseFloat(donatedAmount.substring(1));
-const currencyRemoval = parseFloat(donatedAmount.replace(/[^0-9\.-]+/g, ""));
-const convertedTotalBackers = parseInt(totalBackers.replace(/,/g, ""));
+var currencyRemoval = parseInt(donatedAmount.replace(/[^0-9\.-]+/g, ""));
+var convertedTotalBackers = parseInt(totalBackers.replace(/,/g, ""));
 
 // border color
 const grayBorderColor = document.querySelector(
@@ -64,6 +64,9 @@ const closeModal = document.querySelector(".button-got");
 // donateButton
 const donateButton = document.getElementById("button1");
 const donateButton1 = document.getElementById("button2");
+
+// progress bar
+const progressBar = document.querySelector(".progress-bar");
 
 console.log(convertedTotalBackers);
 console.log(currencyRemoval);
@@ -113,12 +116,8 @@ closemodalButton.addEventListener("click", () => {
 });
 
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target == modal1) {
     modal.style.display = "none";
-  }
-};
-window.onclick = function (event) {
-  if (event.target == modal1) {
     modal1.style.display = "none";
   }
 };
@@ -143,26 +142,71 @@ selectRadioButton1.addEventListener("click", () => {
   }
 });
 
-donateButton.addEventListener("click", () => {
+var width = 0;
+var total;
+var finalTotalBackers;
+
+donateButton.addEventListener("click", (finalTotalBackers,total) => {
   const amountDonated = parseInt(document.querySelector("#amountInput").value);
   console.log(amountDonated);
-  const totalDonation = amountDonated + currencyRemoval;
-  console.log(totalDonation);
-//  const total = totalDonation.toLocaleString();
-//  console.log(total);
-
-const total = `$${totalDonation.toLocaleString()}`;
-console.log(total);
-  modal1.style.display = "block";
-  modal.style.display = "none";
-
+  console.log(finalTotalBackers);
+  console.log(total);
+  if (amountDonated < 25) {
+    console.log("Amount should be more than 25");
+  } else if (amountDonated > 75) {
+    console.log("Amount should be less than 75");
+  } else {
+    console.log("correct");
+    totalDonation = amountDonated + currencyRemoval;
+    console.log(totalDonation);
+    total = totalDonation.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    console.log(total);
+    document.getElementById("donated-amount").innerHTML = `$${total}`;
+    console.log(`$${total}`);
+    modal1.style.display = "block";
+    modal.style.display = "none";
+    const progressBar = document.querySelector(".progress-bar");
+    convertedTotalBackers++;
+    console.log(convertedTotalBackers);
+    finalTotalBackers = convertedTotalBackers.toLocaleString();
+    document.getElementById("total-backers").innerHTML = finalTotalBackers;
+    if (width < 100) {
+      width += 5;
+      progressBar.style.width = width + "%";
+    }
+  }
+  console.log(finalTotalBackers);
+  console.log(total);
 });
 
-donateButton1.addEventListener("click", () => {
-  // console.log(amountDonated1);
-  // amountDonated1.value = "";
-  modal1.style.display = "block";
-  modal.style.display = "none";
+donateButton1.addEventListener("click", (finalTotalBackers,Total) => {
+  const amountDonated1 = parseInt(document.querySelector("#amount1").value);
+  console.log(amountDonated1);
+  if (amountDonated1 < 75) {
+    console.log("Amount should be more than 75");
+  } else if (amountDonated1 > 200) {
+    console.log("Amount should be less than 200");
+  } else {
+    console.log("correct");
+    const totalDonation = amountDonated1 + currencyRemoval;
+    console.log(totalDonation);
+    var total = totalDonation.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    console.log(total);
+    document.getElementById("donated-amount").innerHTML = `$${totalDonation}`;
+    convertedTotalBackers++;
+    console.log(convertedTotalBackers);
+    finalTotalBackers = convertedTotalBackers.toLocaleString();
+    const progressBar = document.querySelector(".progress-bar");
+    document.getElementById("total-backers").innerHTML = finalTotalBackers;
+    modal1.style.display = "block";
+    modal.style.display = "none";
+    if (width < 100) {
+      width += 7;
+      progressBar.style.width = width + "%";
+    }
+  }
+  console.log(finalTotalBackers);
+  console.log(total);
 });
 
 closeModal.addEventListener("click", () => {

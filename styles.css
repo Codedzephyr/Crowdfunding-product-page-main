@@ -422,7 +422,7 @@ section.overall-container {
 }
 
 .progress-bar {
-  width: 80%;
+  width: 0%;
   height: 2vh;
   border-radius: 10px;
   background-color: #147b74;
