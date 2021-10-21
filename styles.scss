@@ -58,6 +58,8 @@ nav {
   width: 80%;
   margin: 0 auto;
   display: flex;
+  position: relative;
+  z-index: 2;
   justify-content: center;
   align-items: center;
 }
@@ -368,7 +370,6 @@ section.overall-container {
 }
 .progress-bar {
   width: 0%;
-  // width: 500px;
   height: 2vh;
   border-radius: 10px;
   background-color: $darkCyan;
@@ -627,7 +628,6 @@ div.modal-content {
   overflow-y: hidden;
   border-radius: 8px;
   padding: 1.25rem;
-  // width: 70%;
   width: 90%;
   max-width: 700px;
 
@@ -666,12 +666,11 @@ div.modal-content {
 
       input[type="radio"] {
         margin-right: 1rem;
-        // margin: 0.5rem 1.3rem 0.55rem 2rem;
       }
       label.container {
         color: $black;
         cursor: pointer;
-        font-size: Clamp(1rem, 5vw, 0.8rem);
+         font-size: Clamp(0.92rem, 5vw, 0.8rem);
         font-family: $commissioner;
       }
 
@@ -700,11 +699,10 @@ div.modal-content {
 
       input[type="radio"] {
         margin-right: 1rem;
-        // margin: 0.5rem 1.3rem 0.55rem 2rem;
       }
       label.container {
         color: $black;
-        font-size: Clamp(1rem, 5vw, 0.8rem);
+         font-size: Clamp(0.92rem, 5vw, 0.8rem);
         cursor: pointer;
         font-weight: $fontWeight7;
         font-family: $commissioner;
@@ -782,6 +780,19 @@ div.modal-content {
         align-items: center;
         justify-content: flex-end;
 
+        div.flex-end-container{
+          position: relative;
+        }
+
+        div.flex-end-container > i{
+          position: absolute;
+          right: 58px;
+          font-weight: $fontWeight5;
+          font-family: $commissioner;
+          font-size: $fontSize;
+          top: 10px;
+          color: $darkGray;
+        }
         #amountInput {
           width: 80px;
           padding: 12px;
@@ -833,7 +844,7 @@ div.modal-content {
       label.container {
         color: $black;
         cursor: pointer;
-        font-size: Clamp(1rem, 5vw, 0.8rem);
+         font-size: Clamp(0.92rem, 5vw, 0.8rem);
         font-weight: $fontWeight7;
         font-family: $commissioner;
       }
@@ -909,6 +920,21 @@ div.modal-content {
         align-items: center;
         justify-content: flex-end;
 
+        
+        div.flex-end-container{
+          position: relative;
+        }
+
+        div.flex-end-container > i{
+          position: absolute;
+          right: 58px;
+          font-weight: $fontWeight5;
+          font-family: $commissioner;
+          font-size: $fontSize;
+          top: 10px;
+          color: $darkGray;
+        }
+
         #amount1 {
           width: 80px;
           padding: 12px;
@@ -959,7 +985,7 @@ div.modal-content {
     }
     label.container {
       color: $black;
-      font-size: Clamp(0.98rem, 5vw, 0.8rem);
+      font-size: Clamp(0.92rem, 5vw, 0.8rem);
       font-weight: $fontWeight7;
       font-family: $commissioner;
     }
