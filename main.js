@@ -1,6 +1,7 @@
 // Making Navbar button clickable
 const NavigationLinks = document.getElementById("navigation");
 const Hamburger = document.getElementById("nav-bar");
+const closeHamburger = document.getElementById("closeNavBar");
 
 // modal butoton
 const modalButton = document.querySelector(".button");
@@ -13,7 +14,19 @@ const modal = document.getElementById("myModal");
 const modal1 = document.getElementById("myModal2");
 
 Hamburger.addEventListener("click", () => {
-  NavigationLinks.classList.toggle("nav-links-container");
+  if (NavigationLinks.style.display !== "block") {
+    NavigationLinks.style.display = "block";
+    Hamburger.style.display = "none";
+    closeHamburger.style.display = "block";
+  }
+});
+
+closeHamburger.addEventListener("click", () => {
+  if (NavigationLinks.style.display == "block") {
+    NavigationLinks.style.display = "none";
+    Hamburger.style.display = "block";
+    closeHamburger.style.display = "none";
+  }
 });
 
 // Making SVG link clickable
@@ -68,15 +81,15 @@ const donateButton1 = document.getElementById("button2");
 // progress bar
 const progressBar = document.querySelector(".progress-bar");
 
-console.log(convertedTotalBackers);
-console.log(currencyRemoval);
+// error warnings for the first modal
+const amountMoreErrorText = document.querySelector(".amountMore");
+const amountLessErrorText = document.querySelector(".amountLess");
+const amountValidErrorText = document.querySelector(".amountValid");
 
-// console.log(parseFloat(donatedAmount.replace(/,/g, '')));
-console.log(donatedAmount);
-// console.log(calculation);
-
-// console.log(convertedDonatedAmount);
-// console.log(totalBackers);
+// error warnings for the second modal
+const amountMoreErrorText1 = document.querySelector(".amountMore1");
+const amountLessErrorText1 = document.querySelector(".amountLess1");
+const amountValidErrorText1 = document.querySelector(".amountValid1");
 
 // adding a function to the SVG
 svgClickable.addEventListener("click", () => {
@@ -150,14 +163,31 @@ var width = 0;
 var totalCalculations = 0;
 var finalTotalBackers;
 
+const amountDonatedForm = document.querySelector("#amountInput");
+const amountDonatedForm1 = document.querySelector("#amount1");
+
+amountDonatedForm.addEventListener("click", () => {
+  amountLessErrorText.style.display = "none";
+  amountMoreErrorText.style.display = "none";
+  amountValidErrorText.style.display = "none";
+});
+
+amountDonatedForm1.addEventListener("click", () => {
+  amountLessErrorText1.style.display = "none";
+  amountMoreErrorText1.style.display = "none";
+  amountValidErrorText1.style.display = "none";
+});
+
 donateButton.addEventListener(
   "click",
   (finalTotalBackers, totalCalculations) => {
     var amountDonated = parseInt(document.querySelector("#amountInput").value);
     if (amountDonated < 25) {
-      console.log("Amount should be more than 25");
+      amountLessErrorText.style.display = "block";
     } else if (amountDonated > 75) {
-      console.log("Amount should be less than 75");
+      amountMoreErrorText.style.display = "block";
+    } else if (isNaN(amountDonated) || amountDonated == "") {
+      amountValidErrorText.style.display = "block";
     } else {
       console.log("correct");
       var donatedAmount1 = document.getElementById("donated-amount").innerHTML;
@@ -197,9 +227,11 @@ donateButton1.addEventListener(
     var amountDonated1 = parseInt(document.querySelector("#amount1").value);
     console.log(amountDonated1);
     if (amountDonated1 < 75) {
-      console.log("Amount should be more than 75");
+      amountLessErrorText1.style.display = "block";
     } else if (amountDonated1 > 200) {
-      console.log("Amount should be less than 200");
+      amountMoreErrorText1.style.display = "block";
+    } else if (isNaN(amountDonated1) || amountDonated1 == "") {
+      amountValidErrorText1.style.display = "block";
     } else {
       console.log("correct");
       var donatedAmount2 = document.getElementById("donated-amount").innerHTML;

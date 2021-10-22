@@ -53,13 +53,17 @@ header {
   display: none;
 }
 
+.close{
+  display: none;
+}
+
 nav {
   height: calc(12vh - 12.8px);
   width: 80%;
   margin: 0 auto;
   display: flex;
-  position: relative;
-  z-index: 2;
+  // position: relative;
+  // z-index: 2;
   justify-content: center;
   align-items: center;
 }
@@ -670,7 +674,7 @@ div.modal-content {
       label.container {
         color: $black;
         cursor: pointer;
-         font-size: Clamp(0.92rem, 5vw, 0.8rem);
+        font-size: Clamp(0.92rem, 5vw, 0.8rem);
         font-family: $commissioner;
       }
 
@@ -702,7 +706,7 @@ div.modal-content {
       }
       label.container {
         color: $black;
-         font-size: Clamp(0.92rem, 5vw, 0.8rem);
+        font-size: Clamp(0.92rem, 5vw, 0.8rem);
         cursor: pointer;
         font-weight: $fontWeight7;
         font-family: $commissioner;
@@ -743,6 +747,27 @@ div.modal-content {
         margin: 0.5rem 0rem 0.5rem 2.3rem;
         font-family: $commissioner;
       }
+      p.amountMore {
+        color: red;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        text-align: center;
+        display: none;
+      }
+      p.amountLess {
+        color: red;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        text-align: center;
+        display: none;
+      }
+      p.amountValid {
+        color: red;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        text-align: center;
+        display: none;
+      }
     }
 
     div.donate-container {
@@ -780,13 +805,13 @@ div.modal-content {
         align-items: center;
         justify-content: flex-end;
 
-        div.flex-end-container{
+        div.flex-end-container {
           position: relative;
         }
 
-        div.flex-end-container > i{
+        div.flex-end-container > i {
           position: absolute;
-          right: 58px;
+          right: 60px;
           font-weight: $fontWeight5;
           font-family: $commissioner;
           font-size: $fontSize;
@@ -795,7 +820,7 @@ div.modal-content {
         }
         #amountInput {
           width: 80px;
-          padding: 12px 30px;
+          padding: 12px 25px;
           font-family: $commissioner;
           font-size: $fontSize;
           border: 1px solid $darkGray;
@@ -844,7 +869,7 @@ div.modal-content {
       label.container {
         color: $black;
         cursor: pointer;
-         font-size: Clamp(0.92rem, 5vw, 0.8rem);
+        font-size: Clamp(0.92rem, 5vw, 0.8rem);
         font-weight: $fontWeight7;
         font-family: $commissioner;
       }
@@ -883,6 +908,27 @@ div.modal-content {
         margin: 0.5rem 0rem 0.5rem 2.3rem;
         font-family: $commissioner;
       }
+      p.amountMore1 {
+        color: red;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        text-align: center;
+        display: none;
+      }
+      p.amountLess1 {
+        color: red;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        text-align: center;
+        display: none;
+      }
+      p.amountValid1 {
+        color: red;
+        font-size: $fontSize;
+        font-family: $commissioner;
+        text-align: center;
+        display: none;
+      }
     }
 
     div.donate-container1 {
@@ -920,14 +966,13 @@ div.modal-content {
         align-items: center;
         justify-content: flex-end;
 
-        
-        div.flex-end-container{
+        div.flex-end-container {
           position: relative;
         }
 
-        div.flex-end-container > i{
+        div.flex-end-container > i {
           position: absolute;
-          right: 58px;
+          right: 60px;
           font-weight: $fontWeight5;
           font-family: $commissioner;
           font-size: $fontSize;
@@ -937,7 +982,7 @@ div.modal-content {
 
         #amount1 {
           width: 80px;
-          padding: 12px 30px;
+          padding: 12px 25px;
           font-family: $commissioner;
           font-size: $fontSize;
           border: 1px solid $darkGray;
@@ -1097,6 +1142,12 @@ div.modal-content2 {
   .container-for-links {
     flex-direction: column;
     z-index: 10;
+    position: relative;
+  }
+
+  nav {
+    position: relative;
+    z-index: 2;
   }
   // third section containing the mahogany edition
   div.third-section-first-container div.inner-container1 p.pledge {
@@ -1134,11 +1185,11 @@ div.modal-content2 {
     position: relative;
   }
 
-  section.overall-container {
-    z-index: 2;
-  }
+  // #navigation.nav-links-container {
+  //   display: none;
+  // }
 
-  #navigation.nav-links-container {
+  #navigation{
     display: none;
   }
 
@@ -1174,6 +1225,11 @@ div.modal-content2 {
   .hamburger {
     cursor: pointer;
     display: block;
+  }
+
+  .close{
+    display: none;
+    cursor: pointer;
   }
 
   .button-container {
