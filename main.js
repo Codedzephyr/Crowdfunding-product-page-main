@@ -3,6 +3,8 @@ const NavigationLinks = document.getElementById("navigation");
 const Hamburger = document.getElementById("nav-bar");
 const closeHamburger = document.getElementById("closeNavBar");
 
+const closeLinkButton = document.getElementById("close-container");
+
 // modal butoton
 const modalButton = document.querySelector(".button");
 
@@ -14,19 +16,21 @@ const modal = document.getElementById("myModal");
 const modal1 = document.getElementById("myModal2");
 
 Hamburger.addEventListener("click", () => {
-  if (NavigationLinks.style.display !== "block") {
-    NavigationLinks.style.display = "block";
-    Hamburger.style.display = "none";
-    closeHamburger.style.display = "block";
-  }
+  NavigationLinks.classList.remove("nav-links-container");
+  Hamburger.classList.remove("hamburger");
+  closeLinkButton.classList.remove("close-container");
 });
 
 closeHamburger.addEventListener("click", () => {
-  if (NavigationLinks.style.display == "block") {
-    NavigationLinks.style.display = "none";
-    Hamburger.style.display = "block";
-    closeHamburger.style.display = "none";
-  }
+  NavigationLinks.classList.add("nav-links-container");
+  Hamburger.classList.add("hamburger");
+  closeLinkButton.classList.add("close-container");
+});
+
+closeHamburger.addEventListener("click", () => {
+  NavigationLinks.classList.add("nav-links-container");
+  closeHamburger.classList.add("close");
+  Hamburger.classList.add("hamburger");
 });
 
 // Making SVG link clickable
