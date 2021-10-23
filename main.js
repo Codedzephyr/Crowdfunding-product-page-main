@@ -187,9 +187,9 @@ donateButton.addEventListener(
   (finalTotalBackers, totalCalculations) => {
     var amountDonated = parseInt(document.querySelector("#amountInput").value);
     if (amountDonated < 25) {
-      amountLessErrorText.style.display = "block";
+    amountMoreErrorText.style.display = "block";
     } else if (amountDonated > 75) {
-      amountMoreErrorText.style.display = "block";
+      amountLessErrorText.style.display = "block";
     } else if (isNaN(amountDonated) || amountDonated == "") {
       amountValidErrorText.style.display = "block";
     } else {
@@ -231,9 +231,9 @@ donateButton1.addEventListener(
     var amountDonated1 = parseInt(document.querySelector("#amount1").value);
     console.log(amountDonated1);
     if (amountDonated1 < 75) {
-      amountLessErrorText1.style.display = "block";
+    amountMoreErrorText1.style.display = "block";
     } else if (amountDonated1 > 200) {
-      amountMoreErrorText1.style.display = "block";
+      amountLessErrorText1.style.display = "block";
     } else if (isNaN(amountDonated1) || amountDonated1 == "") {
       amountValidErrorText1.style.display = "block";
     } else {
